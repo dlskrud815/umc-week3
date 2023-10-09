@@ -18,7 +18,7 @@ body {
   grid-template-columns: repeat(8, 1fr); /* 8열로 나열 */
   gap: 20px; /* 각 영화 사이 간격 */
   justify-content: center;
-  margin-top: 20px;
+  margin: 20px;
 }
 
 /* 각 영화 아이템 스타일 */
