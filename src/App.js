@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Movie from './Components/Movie'; // Movie 컴포넌트를 가져옵니다.
+import { movies } from './movieDummy'; // 영화 데이터를 가져옵니다.
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="app-container">
+        <div className="movie-list">
+          {movies.results.map((movie) => (
+            <Movie
+              key={movie.id}
+              title={movie.title}
+              posterPath={movie.poster_path}
+              voteAverage={movie.vote_average}
+              overview={movie.overview}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
