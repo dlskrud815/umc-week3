@@ -97,7 +97,7 @@ body {
 .movie-description p {
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 15;  /* 3 lines of text */
+  -webkit-line-clamp: 15;  /* 영화 개요가 15줄을 넘어가면 ... 표시 */
   overflow: hidden;
-  margin: 0;  /* remove default margin */
+  margin: 0;
 }
